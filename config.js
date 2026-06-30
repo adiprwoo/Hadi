@@ -28,8 +28,8 @@
 const CONFIG = {
   // ── Recipient Info ────────────────────────────────────────────
   name: "Hadi",
-  photo: "https://adiprwoo.github.io/Happy-Birthday-Hadi/img/hadi.jpg",       // Place your photo in the img/ folder
-  music: "https://adiprwoo.github.io/Happy-Birthday-Hadi/music/birthday.mp3",      // Place your music in the music/ folder
+  photo: "https://adiprwoo.github.io/Hadi/img/hadi.jpg",       // Place your photo in the img/ folder
+  music: "https://adiprwoo.github.io/Hadi/music/birthday.mp3",      // Place your music in the music/ folder
 
   // ── Theme Colors ──────────────────────────────────────────────
   // A toggle button lets the viewer switch between dark & light mode.

@@ -381,28 +381,29 @@ body {
 }
 
 .replay-btn {
-  /* 1. FORCE VISIBILITY */
-  opacity: 0 !important; 
+  /* 1. HIDDEN BY DEFAULT (JS will change these later) */
+  opacity: 0; 
+  pointer-events: none; 
   
-  /* 2. GIVE IT A PHYSICAL SHAPE AND COLOR */
+  /* 2. PHYSICAL SHAPE & COLOR (Keep these so it's visible when JS reveals it) */
   background-color: var(--accent);
-  color: #ffffff !important; /* White text so it stands out */
+  color: #ffffff !important;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   border: none;
-  
-  /* 3. YOUR ORIGINAL SETTINGS (Fixed) */
   display: inline-block;
+  
+  /* 3. BASE SETTINGS */
   cursor: pointer;
   z-index: 3;
-  pointer-events: auto;
   font-weight: 600 !important;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition: opacity 0.5s ease, transform 0.2s ease;
 }
 
 .replay-btn:hover {
-  opacity: 0.8 !important;
-  transform: scale(1.05); /* Adds a little pop when you hover */
+  /* We remove !important here so hover works correctly */
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .last-smile {

@@ -190,7 +190,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  opacity: 0;
+  opacity: 1;
 }
 
 .idea-big-letters span {
@@ -381,16 +381,28 @@ body {
 }
 
 .replay-btn {
+  /* 1. FORCE VISIBILITY */
+  opacity: 1 !important; 
+  
+  /* 2. GIVE IT A PHYSICAL SHAPE AND COLOR */
+  background-color: var(--accent);
+  color: #ffffff !important; /* White text so it stands out */
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  border: none;
+  
+  /* 3. YOUR ORIGINAL SETTINGS (Fixed) */
+  display: inline-block;
   cursor: pointer;
   z-index: 3;
-  pointer-events: none;
-  color: var(--accent) !important;
-  font-weight: 500 !important;
-  transition: opacity 0.3s ease;
+  pointer-events: auto;
+  font-weight: 600 !important;
+  transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 .replay-btn:hover {
-  opacity: 0.7;
+  opacity: 0.8 !important;
+  transform: scale(1.05); /* Adds a little pop when you hover */
 }
 
 .last-smile {

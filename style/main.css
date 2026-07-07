@@ -382,7 +382,7 @@ body {
 
 .replay-btn {
   /* 1. FORCE VISIBILITY */
-  opacity: 1 !important; 
+  opacity: 0 !important; 
   
   /* 2. GIVE IT A PHYSICAL SHAPE AND COLOR */
   background-color: var(--accent);

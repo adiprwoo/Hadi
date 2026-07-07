@@ -18,12 +18,23 @@
       return div;
     },
 
-    animate(tl, el) {
-      const ideaIn = { opacity: 0, y: -20, rotationX: 5, skewX: "15deg" };
-      tl.from(el.querySelectorAll("p"), {
-        duration: 1, ...ideaIn, stagger: 1.2,
-      })
-      // Enable replay button only after it becomes visible
+animate(tl, el) {
+      // 1. Define the starting physical positions
+      const startState = { opacity: 0, y: -20, rotationX: 5, skewX: "15deg" };
+      
+      // 2. Use fromTo to explicitly tell GSAP to end at opacity: 1
+      tl.fromTo(el.querySelectorAll("p"), 
+        startState, 
+        { 
+          duration: 1, 
+          opacity: 1,          // <--- Forces it to become visible!
+          y: 0,                // Returns to original position
+          rotationX: 0, 
+          skewX: "0deg", 
+          stagger: 1.2 
+        }
+      )
+      // 3. Enable replay button only after it becomes visible
       .set(el.querySelector("#replay"), { pointerEvents: "auto" })
       .to(el.querySelector(".last-smile"), {
         duration: 0.5, rotation: 90,

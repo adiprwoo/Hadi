@@ -142,10 +142,13 @@ function buildTimeline(rendered) {
 
   // Setup replay
   const replayBtn = document.getElementById("replay");
+
+  let pesanwhatsapp= "Makasih udah ucapin Hadi ultah >w<"
+
   if (replayBtn) {
     replayBtn.addEventListener("click", () =>{
       // Replace with your desired URL
-      window.location.href = "https://adiprwoo.github.io/Hadi/music/birthday.mp3"; 
+      window.location.href = "https://api.whatsapp.com/send?phone=6289518112698&text=" + pesanwhatsapp; 
       
       // OR, if you want it to open in a new tab, use this instead:
       // window.open("https://your-link-here.com", "_blank");

@@ -113,7 +113,7 @@ const CONFIG = {
     {
       type: "closing",
       text: "Yeyy, kasih tau aku, Hadi suka engga",
-      replayText: "Atau ketuk, kalo mau liat sekali lagi.",
+      replayText: "Atau ketuk, untuk kirim jawabannya ke WhatsApp aku, ya!.",
     },
   ],
 };
